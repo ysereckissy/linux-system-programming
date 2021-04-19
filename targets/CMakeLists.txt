@@ -10,3 +10,4 @@ linux::system::programming
 )
 
 add_subdirectory(fileio)
+add_subdirectory(proc)
