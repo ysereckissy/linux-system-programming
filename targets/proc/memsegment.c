@@ -34,5 +34,8 @@ main(int argc, char **argv)
     p = (char *)malloc(1024);
     doCalc(key);
 
+    /// free the allocated memory
+    free(p);
+
     exit(EXIT_SUCCESS);
 }
