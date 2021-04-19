@@ -5,6 +5,7 @@ add_executable(filecopy)
 add_executable(fileseek)
 add_executable(teeio)
 add_executable(rawcopy)
+add_executable(readv)
 
 #---------------------------------------------------------------------------
 # Add source files to executables
@@ -28,6 +29,11 @@ target_sources(rawcopy
 PRIVATE
 rawcopy.c
 )
+
+target_sources(readv
+PRIVATE
+t_readv.c
+)
 #-------------------------------------------------------------------------------
 # Link libraries
 #--------------------------------------------------------------------------------
@@ -46,6 +52,11 @@ linux::system::programming
 )
 
 target_link_libraries(rawcopy
+PRIVATE
+linux::system::programming
+)
+
+target_link_libraries(readv
 PRIVATE
 linux::system::programming
 )
